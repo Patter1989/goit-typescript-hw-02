@@ -1,6 +1,9 @@
+import { FC } from "react";
 import css from "./Section.module.css";
-
-const Section = ({ children }) => {
+interface SectionProps {
+	children: React.ReactNode;
+}
+const Section: FC<SectionProps> = ({ children }) => {
 	return <section className={css.section}>{children}</section>;
 };
 

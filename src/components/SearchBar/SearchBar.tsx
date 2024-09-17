@@ -1,7 +1,7 @@
 import toast from "react-hot-toast";
 import css from "./SearchBar.module.css"
 import { IoMdSearch } from "react-icons/io";
-import { FC } from "react";
+import {  FC,  } from "react";
 // import toast, {Toaster} from "react-hot-toast";
 
 interface SearchBarProps {

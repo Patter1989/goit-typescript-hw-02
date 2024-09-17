@@ -12,12 +12,12 @@ import LoadMoreBtn from "../LoadMoreBtn/LoadMoreBtn";
 import {Image} from "./App.types"
 
 
-const App: FC = () => {
+const App = () => {
 	const [pictures, setPictures] = useState<Image[] | null>(null);
 	const [loading, setLoading] = useState<boolean>(false);
 	const [error, setError] = useState<boolean | null>(null);
 	const [searchedPic, setSearchedPic] = useState<string>("");
-	const [modalData, setModalData] = useState<string | null>(null);
+	const [modalData, setModalData] = useState<string>("");
 	const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
 	const [pages, setPages] = useState<number>(1);
 	const [totalPages, setTotalPages] = useState<number>(0);
