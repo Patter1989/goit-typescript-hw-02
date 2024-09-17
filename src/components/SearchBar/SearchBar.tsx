@@ -1,7 +1,7 @@
 import toast from "react-hot-toast";
 import css from "./SearchBar.module.css"
 import { IoMdSearch } from "react-icons/io";
-import {  FC,  } from "react";
+import {  FC, FormEvent,  } from "react";
 // import toast, {Toaster} from "react-hot-toast";
 
 interface SearchBarProps {
@@ -9,9 +9,9 @@ interface SearchBarProps {
 }
 
 const SearchBar: FC<SearchBarProps> = ({ onSubmit }) => {
-  const onHandleSubmit = (event: any) => {
+  const onHandleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
-		const inputValue = event.currentTarget.elements.searchedPic.value;
+		const inputValue = (event.currentTarget.elements as any).searchedPic.value;
 		inputValue === ""
 			? toast.error("please write something")
 			: onSubmit(inputValue);
