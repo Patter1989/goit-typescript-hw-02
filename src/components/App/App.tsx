@@ -13,7 +13,7 @@ import {Image} from "./App.types"
 
 
 const App = () => {
-	const [pictures, setPictures] = useState<Image[] | null>(null);
+	const [pictures, setPictures] = useState<Image[]>([]);
 	const [loading, setLoading] = useState<boolean>(false);
 	const [error, setError] = useState<boolean | null>(null);
 	const [searchedPic, setSearchedPic] = useState<string>("");
@@ -52,7 +52,7 @@ const App = () => {
 
 	const onSubmit = (inputValue: string): void => {
 		setSearchedPic(inputValue);
-		setPictures(null);
+		setPictures([]);
 		setPages(1);
 	};
 
