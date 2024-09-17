@@ -1,6 +1,12 @@
 import { ProgressBar } from "react-loader-spinner";
 import css from "./Loader.module.css"
 const Loader = () => {
+	type StylesType ={
+		top:number;
+		left: number;
+		bottom: Number;
+		right: Number;
+	}
   return (
 		<div className={css.loaderWrapper}>
 			<ProgressBar

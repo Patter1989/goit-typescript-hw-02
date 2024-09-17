@@ -1,10 +1,13 @@
+import { FC } from 'react';
 import css from './LoadMoreBtn.module.css'
-
-function LoadMoreBtn({onLoadingMore}) {
+interface OnLoadingMoreProps {
+	onLoadingMore: () => void;
+}
+const LoadMoreBtn: FC<OnLoadingMoreProps> = ({ onLoadingMore}) => {
 	return (
 		<div className={css.btnWrapper}>
 			<button
-				type='buton'
+				type='button'
 				onClick={onLoadingMore}
 				className={css.btn}
 			>
