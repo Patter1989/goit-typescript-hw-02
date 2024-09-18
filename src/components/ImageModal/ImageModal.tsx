@@ -1,5 +1,4 @@
 import { FC } from "react";
-import { Image } from "../App/App.types";
 import css from "./ImageModal.module.css"
 import Modal from "react-modal";
 
